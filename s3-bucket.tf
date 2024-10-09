@@ -22,7 +22,7 @@ resource "aws_s3_bucket_website_configuration" "website_bucket_configuration" {
   }
 }
 
-#Create s3 policyand applying it for s3 bucket
+#Create s3 policy and applying it for s3 bucket
 resource "aws_s3_bucket_policy" "website_bucket_policy" {
   bucket = aws_s3_bucket.s3-bucket.id
   policy = data.aws_iam_policy_document.website_bucket.json
